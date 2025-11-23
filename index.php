@@ -1,5 +1,6 @@
 <?php
-echo ("Hello World")
+echo "</br>", ("Hello World"), "</br>";
+echo ("This where php logs");
 ?>
 
 <!DOCTYPE html>
@@ -7,25 +8,29 @@ echo ("Hello World")
 
 <head>
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-    <h1>Welcome Back!</h1>
 
-    <form action="" method="post" style="display: flex; flex-direction:column; gap: 10px;">
-        <label for="username">Username: </label>
-        <input type="text" name="username" id="username" placeholder="Enter your username" />
+    <section style="display: flex; justify-content: center; align-items: center; margin-top: 100px;">
+        <form action="" method="post" style="display: flex; flex-direction:column; gap: 10px; width: 600px">
 
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email" placeholder="Enter your email " />
+            <h1>Welcome Back!</h1>
 
-        <label for="password">Password: </label>
-        <input type="password" name="password" id="password" placeholder="Enter your password" />
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" placeholder="Enter your username" autocomplete="FALSE" />
 
-        <button type="submit">Sign Up</button>
-        <button type="reset" disabled>Clear Form</button>
-    </form>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" autocomplete="FALSE" />
+
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="FALSE" />
+
+            <button type="submit">Sign Up</button>
+            <button type="reset" disabled>Clear Form</button>
+        </form>
+    </section>
 
 </body>
 
