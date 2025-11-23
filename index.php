@@ -1,6 +1,22 @@
 <?php
+
+include 'connection/database.php';
+
 echo "</br>", ("Hello World"), "</br>";
 echo ("This where php logs");
+
+
+$sql = "SELECT * FROM users";
+$result = $connection->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo ("Users Found: " . $row['username'] . "</br>");
+    }
+} else {
+    echo ("No Users in the Database.");
+}
+
 ?>
 
 <!DOCTYPE html>
