@@ -1,28 +1,3 @@
-<?php
-
-include 'connection/database.php';
-
-echo "</br>", ("Hello World"), "</br>";
-echo ("This where php logs"), "</br>";
-echo (""), "</br>";
-
-
-$sql = "SELECT * FROM users";
-$result = $connection->query($sql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo ("Users Found: " . $row['username'] . "</br>");
-        echo ("User Email: " . $row['email'] . "</br>");
-        echo ("User Password: " . $row['password'] . "</br>");
-        echo ("User Registered TIme: " . $row['registerd_time'] . "</br>");
-    }
-} else {
-    echo ("No Users in the Database.");
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,10 +7,8 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
-
-    <section style="display: flex; justify-content: center; align-items: center; margin-top: 100px;">
-        <form action="" method="post" style="display: flex; flex-direction:column; gap: 10px; width: 600px">
-
+    <section class="form-section">
+        <form action="" method="post">
             <h1>Welcome Back!</h1>
 
             <label for="username">Username: </label>
@@ -47,11 +20,37 @@ if ($result->num_rows > 0) {
             <label for="password">Password: </label>
             <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="FALSE" />
 
-            <button type="submit">Sign Up</button>
-            <button type="reset" disabled>Clear Form</button>
+            <button type="submit" class="btn primary">Sign Up</button>
+            <button type="reset"  class="btn secondary" disabled>Clear Form</button>
         </form>
     </section>
 
 </body>
 
 </html>
+
+<?php
+/*
+
+include 'connection/database.php';
+
+echo "</br>", ("Hello World"), "</br>";
+echo ("This where php logs"), "</br>";
+echo (""), "</br>";
+
+// GET ALL USER'S DATA
+$sql = "SELECT * FROM users";
+$result = $connection->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo ("User Name: " . $row['username'] . "</br>");
+        echo ("User Email: " . $row['email'] . "</br>");
+        echo ("User Password: " . $row['password'] . "</br>");
+        echo ("User Registered TIme: " . $row['registerd_time'] . "</br>");
+    }
+} else {
+    echo ("No Users in the Database.");
+}
+ */
+?>
