@@ -1,5 +1,5 @@
 <?php
-echo ("Database Connection file.");
+echo ("Database Connection file."), "</br>";
 
 // Database Configuration
 $host = "localhost";
@@ -17,7 +17,7 @@ if ($connection->connect_error) {
 }
 
 // For every input unicode
-$connection->set_charset("utf+");
+//$connection->set_charset("utf+");
 
 //Database File Ended
 echo("Database code Ended here");
