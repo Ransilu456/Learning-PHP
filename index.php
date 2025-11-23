@@ -3,7 +3,8 @@
 include 'connection/database.php';
 
 echo "</br>", ("Hello World"), "</br>";
-echo ("This where php logs");
+echo ("This where php logs"), "</br>";
+echo (""), "</br>";
 
 
 $sql = "SELECT * FROM users";
@@ -12,6 +13,9 @@ $result = $connection->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo ("Users Found: " . $row['username'] . "</br>");
+        echo ("User Email: " . $row['email'] . "</br>");
+        echo ("User Password: " . $row['password'] . "</br>");
+        echo ("User Registered TIme: " . $row['registerd_time'] . "</br>");
     }
 } else {
     echo ("No Users in the Database.");
