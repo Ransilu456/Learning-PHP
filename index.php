@@ -11,9 +11,11 @@
 
     <h1>This is the my First HTML/CSS/PHP and MYSQL Backend System.</h1>
 
-    <a href="admin/admin.php">Go to Admin Pannel</a>
-    <a href="auth/login.php">Login Page</a>
-    <a href="auth/register.php">Register Page</a>
+    <section style="display: flex; flex-direction:column;">
+        <a href="admin/admin.php">Go to Admin Pannel</a>
+        <a href="auth/login.php">Login Page</a>
+        <a href="auth/register.php">Register Page</a>
+    </section>
 
 </body>
 
