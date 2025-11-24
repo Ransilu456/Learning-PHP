@@ -1,9 +1,9 @@
 <?php
-echo ("Database Connection file."), "</br>";
+echo ("FROM Database Connection file."), "</br>";
 
 // Database Configuration
 $host = "localhost";
-$database_name = "phptest";
+$database_name = "PHP";
 $database_Username = "root";
 $database_Password = "";
 
@@ -16,8 +16,3 @@ if ($connection->connect_error) {
     die("Connection Failed: " . $connection->connect_error);
 }
 
-// For every input unicode
-//$connection->set_charset("utf+");
-
-//Database File Ended
-echo("Database code Ended here");
